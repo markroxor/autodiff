@@ -94,7 +94,8 @@ class Power(Equation):
 
     def grad(self, var_dict={}):
         Equation.var_dict.update(var_dict)
-        return self.exp2.evaluate() * (self.exp1.evaluate() ** (self.exp2.evaluate() - 1))
+        return (self.exp1.evaluate() ** (self.exp2.evaluate() - 1)) * \
+                (self.exp1.evaluate() * self.exp2.grad() * np.log(np.clip(self.exp1.evaluate(), 0.00001, None)) + self.exp2.evaluate() * self.exp1.grad())
     
     def evaluate(self, var_dict={}):
         Equation.var_dict.update(var_dict)
