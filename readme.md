@@ -91,3 +91,7 @@ exp.update({'x':t, 'y':t})
 plot(exp)
 ```
 ![](misc.png)
+
+
+### TODO  
+- [ ] Extend it for multi-variables.
