@@ -1,5 +1,5 @@
 ## Autodiff
-Module for calculating gradient of any polynomial expression and most of standard functions.
+Module for calculating gradient of any polynomial expression and most standard functions.
 
 ### Usage documentation
 Constants -
